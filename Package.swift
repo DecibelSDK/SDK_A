@@ -24,14 +24,10 @@ let package = Package(
         ),
     ],
     targets: [
-        .binaryTarget(
-            name: "SDK_A",
-            path: "SDK_A.xcframework"
-        ),
         .target(
             name: "sdk-a",
             dependencies: ["sdk-br"],
-            path: "/"
+            path: "SDK_A.xcframework"
         )
     ]
 )
