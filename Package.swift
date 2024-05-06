@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "sdk-a",
-            targets: ["SDK_BR", "SDK_A"]
+            targets: ["SDK_BR"]
         ),
         .library(
             name: "sdk-br",
