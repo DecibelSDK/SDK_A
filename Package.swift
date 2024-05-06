@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "sdk-a",
-            targets: ["SDK_BR"]
+            targets: ["SDK_A"]
         ),
     ],
     dependencies: [
@@ -30,7 +30,7 @@ let package = Package(
         ),
         .target(
             name: "SDK_BR",
-            dependencies: ["SDK_A", "sdk-br"]
+            dependencies: ["sdk-a", "sdk-br"]
         )
     ]
 )
