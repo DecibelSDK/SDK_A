@@ -13,16 +13,16 @@ let package = Package(
     products: [
         .library(
             name: "sdk-a",
-            targets: ["SDK_A", "SDK_BR"]
+            targets: ["FrameworkCTargets"]
         ),
     ],
-//    dependencies: [
-//        .package(
-//            name: "sdk-br",
-//            url: "https://github.com/DecibelSDK/SDK_BR.git",
-//            from: "1.0.0"
-//        ),
-//    ],
+    dependencies: [
+        .package(
+            name: "sdk-br",
+            url: "https://github.com/DecibelSDK/SDK_BR.git",
+            from: "1.0.0"
+        ),
+    ],
     targets: [
         .binaryTarget(
             name: "SDK_A",
@@ -33,14 +33,13 @@ let package = Package(
             url: "https://dl.google.com/firebase/ios/swiftpm/10.25.0/FirebaseAnalytics.zip",
             checksum: "b2a313c4d58a6eee38b4e5b50462a889fbeb5bc9c1fd35d5f1579ec8e0b68463"
         ),
-//        .target(
-//            name: "FrameworkCTargets",
-//            dependencies: [
-//                .target(name: "SDK_A", condition: .when(platforms: .some([.iOS]))),
-//                .product(name: "SDK_BR", package: "sdk-br", condition: .when(platforms: .some([.iOS])))
-//               .target(name: "FrameworkC", condition: .when(platforms: .some([.iOS])))
-//            ],
-//            path: "FrameworkCTargets"
-//        )
+        .target(
+            name: "FrameworkCTargets",
+            dependencies: [
+                .target(name: "SDK_A", condition: .when(platforms: .some([.iOS]))),
+                .target(name: "SDK_BR", condition: .when(platforms: .some([.iOS])))
+            ],
+            path: "FrameworkCTargets"
+        )
     ]
 )
