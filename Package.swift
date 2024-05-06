@@ -15,7 +15,7 @@ let package = Package(
             name: "sdk-a",
             targets: ["SDK_A"]
         ),
-    ], 
+    ],
     dependencies: [
         .package(
             name: "sdk-br",
@@ -27,6 +27,11 @@ let package = Package(
         .binaryTarget(
             name: "SDK_A",
             path: "SDK_A.xcframework"
+        ),
+        .target(
+            name: "sdk-a",
+            dependencies: ["sdk-br"],
+            path: "/"
         )
     ]
 )
