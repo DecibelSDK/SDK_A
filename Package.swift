@@ -39,7 +39,7 @@ let package = Package(
                 .target(name: "SDK_A", condition: .when(platforms: .some([.iOS]))),
                 .target(name: "SDK_BR", condition: .when(platforms: .some([.iOS])))
             ],
-            path: "/"
+            path: "Targets"
         )
     ]
 )
