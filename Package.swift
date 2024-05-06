@@ -13,11 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "sdk-a",
-            targets: ["SDK_A"]
-        ),
-        .library(
-            name: "sdk-br",
-            targets: ["SDK_BR"]
+            targets: ["SDK_A", "SDK_BR"]
         ),
     ],
     targets: [
@@ -27,8 +23,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "SDK_BR",
-            url: "https://dl.google.com/firebase/ios/swiftpm/10.25.0/FirebaseAnalytics.zip",
-            checksum: "b2a313c4d58a6eee38b4e5b50462a889fbeb5bc9c1fd35d5f1579ec8e0b68463"
+            url: "https://drive.google.com/file/d/1mwskoQtnMweszdBgnXx1eIkSNg5iVPcn/view?usp=share_link",
+            checksum: "5bc54cca3f15b7dea50e83266475e9fcda53777e2856abb5a9c9617533c98cf2"
         ),
     ]
 )
