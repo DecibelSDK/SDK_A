@@ -24,17 +24,9 @@ let package = Package(
         ),
     ],
     targets: [
-            .binaryTarget(
-                name: "SDK_A",
-                path: "SDK_A.xcframework"
-            ),
-            .target(
-                name: "sdk-a",
-                dependencies: [
-                    .target(name: "SDK_A", condition: .when(platforms: .some([.iOS]))),
-                    .product(name: "sdk-br", package: "sdk-br")
-                ],
-                path: ""
-            )
+        .binaryTarget(
+            name: "SDK_A",
+            path: "SDK_A.xcframework"
+        )
     ]
 )
