@@ -30,7 +30,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "SDK_BR",
-            url: "https://www.icloud.com/iclouddrive/0e5txnfh_Pwa58VU8cY-VX-cw#SDK%5FBR.xcframework",
+            url: "https://www.icloud.com/iclouddrive/0e5txnfh_Pwa58VU8cY-VX-cw#SDK%5FBR.xcframework.zip",
             checksum: "5bc54cca3f15b7dea50e83266475e9fcda53777e2856abb5a9c9617533c98cf2"
         ),
 //        .target(
