@@ -13,7 +13,7 @@ let package = Package(
     products: [
         .library(
             name: "sdk-a",
-            targets: ["SDK_A"]
+            targets: ["SDK_A", "sdk-br"]
         ),
     ],
     dependencies: [
@@ -27,11 +27,6 @@ let package = Package(
         .binaryTarget(
             name: "SDK_A",
             path: "SDK_A.xcframework"
-        ),
-        .binaryTarget(
-            name: "SDK_BR",
-            url: "https://github.com/DecibelSDK/SDK_BR/blob/main/SDK_BR.xcframework.zip",
-            checksum: "5bc54cca3f15b7dea50e83266475e9fcda53777e2856abb5a9c9617533c98cf2"
         )
     ]
 )
