@@ -15,6 +15,10 @@ let package = Package(
             name: "sdk-a",
             targets: ["SDK_A"]
         ),
+        .library(
+            name: "sdk-all",
+            targets: ["SDK_ALL"]
+        ),
     ],
     dependencies: [
         .package(
@@ -25,13 +29,13 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "sdk-a",
+            name: "SDK_A",
             path: "SDK_A.xcframework"
         ),
         .target(
-            name: "SDK_A",
+            name: "SDK_ALL",
             dependencies: ["sdk-a", "sdk-br"],
-            path: ""
+            path: "/"
         )
     ]
 )
