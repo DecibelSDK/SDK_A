@@ -1,0 +1,74 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SDK_A",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SDK_BR",
+        "printedName": "SDK_BR",
+        "declKind": "Import",
+        "moduleName": "SDK_A"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SDKA",
+        "printedName": "SDKA",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5SDK_A4SDKAC10initializeyyFZ",
+            "mangledName": "$s5SDK_A4SDKAC10initializeyyFZ",
+            "moduleName": "SDK_A",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:5SDK_A4SDKAC",
+        "mangledName": "$s5SDK_A4SDKAC",
+        "moduleName": "SDK_A",
+        "declAttributes": [
+          "Final",
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/victor\/Work\/Xcode\/Bridge\/SDK_A\/Xcode\/SDK_A\/Public.swift",
+      "kind": "StringLiteral",
+      "offset": 198,
+      "length": 21,
+      "value": "\"Hello World! from A\""
+    }
+  ]
+}
