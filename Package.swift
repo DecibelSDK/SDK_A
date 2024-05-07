@@ -16,10 +16,31 @@ import PackageDescription
                 targets: ["SDK_A"]
             )
         ],
+        dependencies: [
+            .package(
+                url: "https://github.com/DecibelSDK/SDK_BR.git",
+                from: "1.0.0"
+            )
+        ],
         targets: [
             .binaryTarget(
                 name: "SDK_A",
                 path: "SDK_A.xcframework"
             ),
+            .target(
+                name: "SDK_A_Wrapper",
+                dependencies: [
+                    .target(
+                        name: "SDK_A",
+                        condition: .when(platforms: [.iOS])
+                    ),
+                    .product(
+                        name: "sdk-br",
+                        package: "SDK_BR",
+                        condition: .when(platforms: [.iOS])
+                    )
+                ],
+                path: "SDK_A_Wrapper"
+            )
         ]
     )
