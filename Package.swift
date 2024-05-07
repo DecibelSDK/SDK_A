@@ -17,12 +17,20 @@ import PackageDescription
             )
         ],
         dependencies: [
-            .package(url: "https://github.com/DecibelSDK/SDK_BR.git", from: "1.0.0")
+            .package(
+                url: "https://github.com/DecibelSDK/SDK_BR.git",
+                from: "1.0.0"
+            )
         ],
         targets: [
-            .binaryTarget(
+//            .binaryTarget(
+//                name: "SDK_A",
+//                path: "Sources/SDK_A.xcframework"
+//            ),
+            .target(
                 name: "SDK_A",
-                path: "SDK_A.xcframework"
-            )
+                dependencies: ["SDK_BR"],
+                path: "Sources"
+            ),
         ]
     )
