@@ -13,7 +13,7 @@ import PackageDescription
         products: [
             .library(
                 name: "sdk-a",
-                targets: ["SDK_A"]
+                targets: ["SDK_A_Wrapper"]
             )
         ],
         dependencies: [
