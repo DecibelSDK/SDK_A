@@ -13,7 +13,7 @@ import PackageDescription
         products: [
             .library(
                 name: "sdk-a",
-                targets: ["SDK_A"]
+                targets: ["sdk-a"]
             )
         ],
         dependencies: [
@@ -23,13 +23,13 @@ import PackageDescription
             )
         ],
         targets: [
-//            .binaryTarget(
-//                name: "SDK_A",
-//                path: "Sources/SDK_A.xcframework"
-//            ),
-            .target(
+            .binaryTarget(
                 name: "SDK_A",
-                dependencies: ["SDK_BR"],
+                path: "Sources/SDK_A.xcframework"
+            ),
+            .target(
+                name: "sdk-a",
+                dependencies: ["SDK_A", "SDK_BR"],
                 path: "Sources"
             ),
         ]
