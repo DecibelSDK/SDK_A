@@ -19,7 +19,7 @@ import PackageDescription
         dependencies: [
             .package(
                 url: "https://github.com/DecibelSDK/SDK_BR.git",
-                from: "1.0.0"
+                from: "1.0.2"
             )
         ],
         targets: [
