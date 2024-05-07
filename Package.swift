@@ -13,24 +13,13 @@ import PackageDescription
         products: [
             .library(
                 name: "sdk-a",
-                targets: ["sdk-a"]
-            )
-        ],
-        dependencies: [
-            .package(
-                url: "https://github.com/DecibelSDK/SDK_BR.git",
-                from: "1.0.0"
+                targets: ["SDK_A"]
             )
         ],
         targets: [
             .binaryTarget(
                 name: "SDK_A",
-                path: "Sources/SDK_A.xcframework"
-            ),
-            .target(
-                name: "sdk-a",
-                dependencies: ["SDK_A", "SDK_BR"],
-                path: "Sources"
+                path: "SDK_A.xcframework"
             ),
         ]
     )
