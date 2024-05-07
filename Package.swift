@@ -5,30 +5,24 @@
 
 import PackageDescription
 
-let package = Package(
-    name: "sdk-a",
-    platforms: [
-        .iOS(.v11)
-    ],
-    products: [
-        .library(
-            name: "sdk-a",
-            targets: ["SDK_A"]
-        ),
-        .library(
-            name: "sdk-br",
-            targets: ["SDK_BR"]
-        ),
-    ],
-    targets: [
-        .binaryTarget(
-            name: "SDK_A",
-            path: "SDK_A.xcframework"
-        ),
-        .binaryTarget(
-            name: "SDK_BR",
-            url: "https://github.com/DecibelSDK/SDK_BR/releases/download/1.0.1/SDK_BR.xcframework.zip",
-            checksum: "5bc54cca3f15b7dea50e83266475e9fcda53777e2856abb5a9c9617533c98cf2"
-        ),
-    ]
-)
+    let package = Package(
+        name: "sdk-a",
+        platforms: [
+            .iOS(.v11)
+        ],
+        products: [
+            .library(
+                name: "sdk-a",
+                targets: ["SDK_A"]
+            )
+        ],
+        dependencies: [
+            .package(url: "https://github.com/DecibelSDK/SDK_BR.git", from: "1.0.0")
+        ],
+        targets: [
+            .binaryTarget(
+                name: "SDK_A",
+                path: "SDK_A.xcframework"
+            )
+        ]
+    )
